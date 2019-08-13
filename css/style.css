@@ -1,0 +1,79 @@
+
+
+
+body {
+  color: white;
+  background-color: #2d2a2f;
+  font-family: serif;
+}
+
+.header {
+    display: block;
+    position: relative;
+    top: -20px;
+    left: -10px;
+    background-color: #1E90FF;
+    width: 1331px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.img {
+  display: block;
+  position: relative;
+  left: -10px;
+  top: -20px;
+  width: 1350px;
+  height: 500px;
+  background-image: url("../img/with-power-3.jpg");
+
+  text-align: center;
+
+  transition: 1s;
+}
+
+.img:hover {
+  background-image: url("../img/projects-cancer.jpg");
+}
+
+.div-1 {
+  display: block;
+  position: relative;
+  width: 1350px;
+  height: 650px;
+  top: -20px;
+  left: -10px;
+  background-color: #20B2AA;
+}
+
+.div-2 {
+  display: block;
+  position: relative;
+  width: 1350px;
+  height: 450px;
+  top: -20px;
+  left: -10px;
+  background-color: #2d2a2f;
+}
+
+.div-3 {
+  display: block;
+  position: relative;
+  width: 1350px;
+  height: 750px;
+  left: -10px;
+  background-color: #483D8B;
+}
+
+.text {
+  text-align: center;
+  display:block;
+  position: absolute;
+  width: 600px;
+  left: 400px;
+}
+
+footer {
+  text-align: center;
+}

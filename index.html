@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WCG</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  </head>
+  <body>
+
+    <header>
+      <div class="header">
+          <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            World Community Grid - IBM</h2>
+      </div>
+    </header>
+
+    <section>
+
+      <div class="img">
+        <br/>
+
+        <div class="text">
+
+          <h3>Introdução</h3>
+          E se fosse possível ajudar no tratamento da AIDS/HIV enquanto atualiza seu status?<br/>
+          E se fosse possível ajudar no tratamento do câncer infantil enquanto assiste a um vídeo?<br/>
+          E se fosse possível ajudar a curar Zika enquanto ouve música?<br/>
+          E se fosse possível ajudar na luta contra a tuberculose enquanto lê as notícias?<br/>
+          <br/>
+          A resposta para essas perguntas é: Sim! É possível.<br/>
+
+
+          <h3>O que é o World Community Grid?</h3>
+
+            <p>
+              <b>World Community Grid (WCG)</b>s é um projeto da IBM que pretende criar o maior supercomputador 
+              público do mundo para realizar pesquisas científicas que beneficiem a humanidade. 
+            </p>
+
+            <p>
+              O conceito do World Community Grid é que qualquer um pode participar ativamente de uma pesquisa 
+              científica que busque drogas que combatam câncer, AIDS ou a dengue sem ter quaisquer conhecimentos
+               profundos sobre biologia e medicina. O requisito mínimo para participar de qualquer pesquisa é se 
+               cadastrar no site do projeto e fazer o download da plataforma BOINC, que é usada para fazer a intercessão 
+               entre o computador do voluntário e o servidor central.
+            </p>
+
+        </div>
+      </div>
+
+      <div class="div-1">
+
+        <div class="text">
+
+          <h3>Como funciona?</h3>
+
+          <p>
+            A ideia por trás do projeto é simples, o computador do voluntário é usado para processar dados que, normalmente, 
+            demorariam muito tempo para serem processados por um único computador. Quando se soma os computadores e os dados
+             processados por eles ao redor de todo o mundo, pesquisas que demandam muita computação e dados que normalmente 
+             poderiam levar anos para serem processados, podem ser processados em semanas ou meses. 
+          </p>
+
+          <p>
+            A plataforma BOINC utiliza apenas processamento ocioso do computador do voluntário, que é usado para processar dados
+             e devolvê-los ao servidor central. Desse modo, <b>aplicação não interfere na utilização diária do computador.</b>
+          </p>
+
+          <p>
+            Este modelo é chamado de <b>computação filantrópica ou voluntária.</b> O ambiente de computação voluntária apresenta 
+            características especiais. Uma delas é que a disponibilidade das máquinas é extremamente dinâmica, com usuários 
+            entrando e saindo sem aviso prévio, e por isso o WCG, através do BOINC, implementa uma API para função de checkpoint, 
+            que permite que o estado de execução da aplicação seja salvo e retomado no mesmo ponto em que foi interrompido.
+          </p>
+
+          <p>
+            A arquitetura do BOINC também é simples, há um banco de dados relacional ao lado do servidor, que armazena as 
+            informações referentes a cada projeto, como
+          </p>
+
+          <p>
+            usuários cadastrados, unidades de trabalho disponíveis, unidades de trabalho enviadas e processadas e assim por diante. 
+            Cada projeto de pesquisa também tem um serviço responsável por distribuir as unidades de trabalho e tratar os resultados 
+            recebidos. Os servidores de dados são os responsáveis pela distribuição dos arquivos de dados e seu recebimento. 
+            Os serviços de escalonamento controlam o fluxo de entrega das unidades de trabalho aos usuários, conforme a produtividade 
+            de cada um. A interface com o usuário é feita via Web.
+          </p>
+
+          <p>
+            O WCG, como é baseado no BOINC, e como qualquer projeto de computação filantrópica, opera com o servidor enviando dados aos 
+            programas cliente apenas por solicitação destes, e estes, após executar as computações, retornam os resultados ao servidor.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="div-2">
+
+        <div class="text">
+          
+          <h3>Há algum risco?</h3>
+
+          <p>
+            As questões de segurança merecem atenção para impedir falsificação de resultados, os projetos do WCG utilizam redundância para diminuir 
+            a chance de ocorrências de erros e falsificações. Isto é, cada unidade de trabalho é distribuída para múltiplos clientes, os resultados gerados por eles são comparados e são aceitos apenas aqueles nos quais o consenso é obtido. Caso necessário, novos clientes são adicionados para fazer o processamento dos mesmos dados, a fim de se analisar os resultados quando não há um consenso.
+          </p>
+
+          <p>
+            O WCG gerencia a maior parte das tarefas de redundância, embora a aplicação deva se envolver com alguns dos processos de validação e assimilação. Validação acontece quando um número suficiente de respostas chega ao servidor e devem ser avaliadas a fim de se provar um consenso. Assimilação é o mecanismo no qual o projeto é notificado do término, com sucesso ou não, de uma unidade de trabalho. Quando é obtido consenso, os resultados são enviados para processamento complementar pela parte da aplicação que roda no servidor. Se a unidade de trabalho não conseguir ser executada com sucesso, por não haver quórum ou não ter sido obtido consenso, a aplicação no servidor é acionada para determinar ações alternativas.
+          </p>
+
+          <p>
+            O WCG utiliza assinatura de código para eliminar a possibilidade de um cracker distribuir um vírus no lugar do cliente verdadeiro. Cada projeto possui um par de chaves criptográficas que são utilizadas para autenticar os programas distribuídos.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="div-3">
+
+        <div class="text">
+
+          <h3>Funciona mesmo?</h3>
+
+          <p>
+            Já houve uma pesquisa concluída através da WCG no Brasil sobre comparação de genomas. A pesquisa foi desenvolvida pela Fiocruz e o resultado pode ser visto em <a href="http://www.worldcommunitygrid.org/about_us/viewNewsArticle.do?articleId=132">http://www.worldcommunitygrid.org/about_us/viewNewsArticle.do?articleId=132</a>  Uma segunda pesquisa brasileira, de busca por drogas que combatam a esquistossomose, está se iniciando agora. Clique aqui para ver.
+          </p>
+
+          <p>
+            Todas as pesquisas em andamento podem ser encontradas no site do projeto <a href="www.worldcommunitygrid.org">(www.worldcommunitygrid.org)</a>.
+          </P>
+
+          <h3>Como participar?</h3>
+
+          <p>
+            Para se tornar um voluntário do World Community Grid basta acessa o site clicando aqui <a href="https://www.worldcommunitygrid.org/">(https://www.worldcommunitygrid.org/)</a> , se cadastrar (https://www.worldcommunitygrid.org/join.action#signup) e fazer o download o download da plataforma BOINC. Após feito tudo isso basta continuar utilizando o computador normalmente e já estará ajudando.
+          </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dOFOh4iXQ7Q" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+
+      <p>
+        Trabalho realizado  pelos alunos Igor joaquim dos Santos Lima e Kevenn Douglas Caterinque Calais<br/>
+         para disciplina de POO-2 orientada pelo professor Rafael Oliveira Vasconcelos, da Universidade Tiradentes.
+      </p>
+
+      <div style="position:relative; left:600px; width: 50px; height: 50px;">
+        <img src="img/logoUnit.png" width="100px"/>
+      </div>
+
+    </footer>
+
+  </body>
+</html>
